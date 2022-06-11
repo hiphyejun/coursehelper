@@ -1,5 +1,5 @@
-# course Register helper
-
+# Course register helper
+21700209 Hyejun Kim
 ### Final Project of OSS
 
 # Function of this project. 
