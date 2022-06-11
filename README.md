@@ -20,8 +20,12 @@ The project help students to quickly determine the best course registration ord
 If you have any questions or would like more information, please contact at 21700209@handong.ac.kr <br>
 There are more contact information at the bottom of the website.
 
-### My contribution
+# My contribution
 I wrote the full codes and designed the web.
 
-### Presentation Video Link
+# Presentation Video Link
 You can watch a presentation video about this project here (https:)
+
+# pre view
+![image](https://user-images.githubusercontent.com/107266952/173190172-fe13f24e-78c4-40f0-a9d1-d689cb91a51a.png)
+![image](https://user-images.githubusercontent.com/107266952/173190204-20eb27b1-38f1-438f-8ddb-ad10d21bc5e8.png)
