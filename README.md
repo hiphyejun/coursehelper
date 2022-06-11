@@ -1,4 +1,4 @@
-# coursehelper
+# course Register helper
 
 ### Final Project of OSS
 
@@ -11,7 +11,7 @@ If you enter the subject, the number of course quotas, and the number of prelimi
 3. Put the files into /var/www/html directory
 4. In your browser, type in IP address of your Raspberry Pi or https://raspberrypi.local and /coursehelper/courseRegister.html <br>
 (Make sure your Raspberry Pi is in the same network, In my case the page is http://192.168.0.40/coursehelper/courseRegister.html)
-5. Now you can use Weight Training Helper!
+5. Now you can use Coursehelper!
 
 # Why is this project helpful?
 The project help students to quickly determine the best course registration order without having to perform cumbersome calculations, increasing their chances of enrolling in the courses they desire.
