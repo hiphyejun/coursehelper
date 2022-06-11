@@ -5,7 +5,7 @@
 # Function of this project. 
 If you enter the subject, the number of course quotas, and the number of preliminary applicants into this project, you will be informed of the order in which the course registration success rate is highest through calculation.
 
-#How do I get started?
+# How do I get started?
 1. Download this html file i uploaded.
 2. Install a web server on your Raspberry Pi (Apache or Nginx recommended)
 3. Put the files into /var/www/html directory
