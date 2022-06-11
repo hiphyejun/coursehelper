@@ -9,7 +9,8 @@ If you enter the subject, the number of course quotas, and the number of prelimi
 1. Download this html file i uploaded.
 2. Install a web server on your Raspberry Pi (Apache or Nginx recommended)
 3. Put the files into /var/www/html directory
-4. In your browser, type in IP address of your Raspberry Pi or https://raspberrypi.local and /coursehelper/courseRegister.html <br>(Make sure your Raspberry Pi is in the same network
+4. In your browser, type in IP address of your Raspberry Pi or https://raspberrypi.local and /coursehelper/courseRegister.html <br>
+(Make sure your Raspberry Pi is in the same network, In my case the page is http://192.168.0.40/coursehelper/courseRegister.html)
 5. Now you can use Weight Training Helper!
 
 # Why is this project helpful?
