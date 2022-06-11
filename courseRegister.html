@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<style>
+  body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  color: white;
+  font-family: verdana;
+  font-size: 15px;
+
+}
+  </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<html>
+<head>
+	<script>
+		function tableCreate(){
+			var html = '';
+						
+			var name = $("#inName").val();
+			var course = $("#course").val();
+			var applicant = $("#apllicant").val();
+      var priority = applicant-course;
+			var remove = $("remove").val();
+						
+			html += '<tr>';
+			html += '<td>'+name+'</td>';
+			html += '<td>'+course+'</td>';
+			html += '<td>'+applicant+'</td>';
+      html += '<td>'+priority+'</td>';
+			html += '<td><button onclick="tableDelete(this)" id="remove">remove</button></td>';
+			html += '</tr>';
+						
+			$("#dynamicTable").append(html);
+						
+			$("#inName").val('');
+			$("#course").val('');
+			$("#apllicant").val('');
+    
+		}
+
+		function tableDelete(obj){
+			var tr = $(obj).parent().parent();
+
+			tr.remove();
+		}
+
+    function sortTable() {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("dynamicTable");
+  switching = true;
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length-1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[3];
+      y = rows[i + 1].getElementsByTagName("TD")[3];
+      //check if the two rows should switch place:
+      if (x.innerHTML < y.innerHTML) {
+        //if so, mark as a switch and break the loop:
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+    
+	</script>
+</head>
+<body>
+  <h1>Course register helper</h1>
+
+<p><b>How to use </b></p>
+<p>1. Input the values to table and click append.</p>
+<p>2. If you inputted all datas, click sort button.</p>
+<p>3. It will show you the order as Desc order.</p> 
+  <div>
+		<table border="1px" id="dynamicTable">
+
+			<colgroup>
+				<col width="200px">
+				<col width="200px">
+				<col width="200px">
+        <col width="200px">
+				<col width="100px">
+			</colgroup>
+
+			<thead>
+				<tr>
+					<th>과목명</th>
+					<th>수강정원</th>
+					<th>예비수강인원</th>
+          <th>우선순위</th>
+					<th>입력</th>
+				</tr>
+			</thead>
+
+			<tbody id="dynamicTbody"></tbody>
+
+			<tfoot>
+				<tr>
+					<td><input type="text" placeholder="과목명" id="inName"></td>
+					<td><input type="number" placeholder= "수강정원" id="course"></td>
+					<td><input type="number" placeholder="예비수강인원" id="apllicant"></td>
+          <td></td>
+          <td><button onclick="tableCreate()">append</button></td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+<p><button onclick="sortTable()">Sort</button></p>
+</body>
+</html>
